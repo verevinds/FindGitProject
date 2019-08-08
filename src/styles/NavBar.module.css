@@ -1,0 +1,14 @@
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+.item{
+    padding: 0 10px;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    text-shadow: none;
+}
+.item:first-child{
+    border-left: none;
+}
