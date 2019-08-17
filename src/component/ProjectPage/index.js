@@ -1,3 +1,4 @@
+// @flow
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { changeSearch, fetchProject } from '../../redux/actionCreators';
@@ -5,9 +6,14 @@ import styles from '../../styles/project.module.css';
 import Header from './Project/Header/Header';
 import List from './Project/List/List';
 
+type Props ={
+  changeSearch: (text: string) => void,
+  fetchProject: (search: string) => void,
+  items: { github: { search: string } }
+}
 
-class ProjectComponent extends PureComponent {
-  onChange = (event) => {
+class ProjectComponent extends PureComponent<Props> {
+  onChange = (event: { target: { value: string } }) => {
     const { changeSearch, fetchProject } = this.props;
     const valInputSearch = event.target.value;
 
@@ -18,10 +24,12 @@ class ProjectComponent extends PureComponent {
   }
 
   render() {
+    const { props, onChange } = this;
+
     return (
       <div className={styles.body}>
-        <Header store={this.props.items} onChange={this.onChange} />
-        <List store={this.props.items} />
+        <Header search={props.items.github.search} onChange={onChange} />
+        <List store={props.items.github} />
       </div>
     );
   }

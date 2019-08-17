@@ -1,3 +1,4 @@
+// @flow
 export const CHANGE_SEARCH = 'CHANGE_SEARCH';
 export const REQUESTED = 'REQUESTED';
 export const REQUESTED_SUCCEEDED = 'REQUESTED_SUCCEEDED';

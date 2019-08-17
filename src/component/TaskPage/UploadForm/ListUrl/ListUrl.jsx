@@ -1,14 +1,15 @@
+// @flow
 import React from 'react';
 import T from 'prop-types';
 
 const ListUrl = (props) => {
-  console.log(props);
+  const { data } = props;
   return (
     <div>
 
       <ul>
         {
-          props.data.map(item => (
+          data.map(item => (
             <li key={item}>
               <a href={item}>{item}</a>
             </li>

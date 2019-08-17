@@ -1,0 +1,13 @@
+[ignore]
+.*/node_modules/.*
+.*/scr/serviceWorker.js
+.*/scr/index.js
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]

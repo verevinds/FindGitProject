@@ -1,8 +1,8 @@
+// @flow
 import React, { useRef } from 'react';
-import T from 'prop-types';
 import { upload } from './API';
 
-const UploadForm = ({ onUpdateList }) => {
+const UploadForm = ({onUpdateList}) => {
   const inputEl = useRef(null);
 
   const onUpload = (e) => {
@@ -27,7 +27,4 @@ const UploadForm = ({ onUpdateList }) => {
   );
 };
 
-UploadForm.propTypes = {
-  onUpload: T.func.isRequired,
-};
 export default UploadForm;
