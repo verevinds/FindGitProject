@@ -1,5 +1,5 @@
-.body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
